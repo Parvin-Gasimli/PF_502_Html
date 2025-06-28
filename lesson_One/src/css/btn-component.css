@@ -1,0 +1,68 @@
+.btn{
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    padding: 8px 12px;
+}
+.btn:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.btn_default{
+    background-color: #000;
+    color: white;
+}
+.btn_primary{
+    background-color: blue;
+    color: white;
+}
+.btn_secondary{
+    background-color: gray;
+    color: white;
+}
+.btn_danger{
+    background-color: red;
+    color: white;
+    
+}
+.btn_success{
+    background-color: green;
+    color: white;
+}
+.btn_warning{
+    background-color: orange;
+    color: white;
+}
+.btn_info{
+    background-color: cyan;
+    color: black;
+}
+
+.btn_rounded_sm{
+    border-radius: 2px;
+}
+.btn_rounded_xs{
+    border-radius: 6px;
+}
+.btn_rounded_md{
+    border-radius: 12px;
+}
+.btn_rounded_lg{
+    border-radius: 14px;
+}
+.btn_rounded_xl{
+    border-radius: 16px;
+}
+.btn_rounded_xxl{
+    border-radius: 20px;
+}
+.btn_rounded_full{
+    border-radius: 100%;
+}
+.btn_full{
+    width: 100%;
+}
+.btn_xl{
+    font-size: 20px;
+    padding: 12px 16px;
+}

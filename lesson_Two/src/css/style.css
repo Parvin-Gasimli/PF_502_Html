@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  box-sizing: border-box;
+  /* margin: 0;
+  padding: 0; */
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+@font-face {
+  font-family: "Luckiest";
+  font-style: normal;
+  src: url("../fonts/Luckiest/LuckiestGuy.ttf");
+}
+
+:root {
+  --primary-color: #11486f;
+  --secondary-color: #2ecc71;
+  --background-color: #ecf0f1;
+  --black--color: #000;
+  --text-color: #d60084;
+  --bg-color: rgb(red, blue, green);
+
+  --font-sm: 12px;
+  --font-md: 16px;
+  --font-lg: 20px;
+  --font-xl: 24px;
+  --font-xxl: 32px;
+
+  --rounded-sm: 4px;
+  --rounded-md: 8px;
+  --rounded-lg: 12px;
+  --rounded-xl: 16px;
+  --rounded-full: 100%;
+}
+
+body {
+  /* background-color: var(--bg-color); */
+  /* background-color: rgba(255, 124, 250, 0.6); */
+}
+#header {
+  margin: 100px 0;
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  clip-path: circle(50% at 18% 14%);
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+#banner h1 {
+  /* font-size: var(--font-xxl); */
+  color: var(--primary-color);
+  /* margin-left: 100px; */
+  border: 1px solid black;
+  /* margin-top: 100px; */
+  /* width: 400px; */
+  margin: 100px 150px;
+  padding: 10px;
+}
+#banner h2 {
+  font-size: var(--font-xxl);
+  color: var(--secondary-color);
+}
+
+#hero_items p {
+  font-size: 24px;
+  color: green;
+}
+
+#hero_items h6 {
+  font-size: 43px;
+  color: yellow;
+}
+#faq p,
+h4,
+h5,
+h6 {
+  font-size: var(--font-lg);
+  color: var(--text-color);
+}
+
+.btn {
+  --rounded-md: 0;
+  border-radius: var(--rounded-md);
+  background-color: var(--black--color);
+  color: var(--background-color);
+  font-size: var(--font-md);
+  padding: 10px 20px;
+  border: none;
+}
+
+.btn2 {
+  /* border-radius: var(--rounded-md); */
+  /* background-color: var(--black--color); */
+  color: var(--background-color);
+  font-size: var(--font-md);
+  padding: 10px 20px;
+  border: none;
+}
+
+.banner_img {
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  clip-path: circle(38.6% at 0 0);
+  transition: all 1s ease-in-out;
+}
+.banner_img:hover {
+  clip-path: circle(100%);
+}
+.banner_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#hero_items .items {
+  width: 500px;
+  height: 500px;
+  margin: 20px auto;
+  /* border-bottom: 2px solid red;
+  border-top: 2px solid green;
+  border-right: 4px solid blue;
+  border-left: 4px solid yellow; */
+  /* border-width: 20px;
+  border-style: solid;
+  border-color: red; */
+  border: 10px solid red;
+  /* border-radius: 120px 0 0 120px; */
+  /* border-radius: 0 120px 120px 0; */
+  /* border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; */
+  /* flex-direction: column; */
+  /* overflow: hidden; */
+}
+
+#dimension {
+}
+#dimension .item {
+  max-width: 800px;
+  border: 1px solid black;
+  max-height: 500px;
+  overflow-y: scroll;
+  box-shadow: 0px 0px 10px 0px red;
+}
+#dimension .item p {
+  line-height: 25px;
+  text-indent: 50px;
+}
+#dimension .item p::first-letter {
+  font-size: 100px;
+  color: red;
+  text-shadow: 2px 2px;
+}
+
+#dimension ::-webkit-scrollbar-thumb {
+  background-color: rgb(192, 192, 192);
+  border-radius: 10px;
+}
+#dimension ::-webkit-scrollbar {
+  width: 3px;
+  background-color: red;
+}
+
+#calc .item {
+  width: 800px;
+  height: 800px;
+  border: 1px solid #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* outline: 12px solid #11486f; */
+}
+#calc .item .item_one {
+  width: calc(100% - 200px);
+  height: calc(100% - 200px);
+  border: 1px solid #ccc;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#calc .item .item_one .item_two {
+  width: calc(100% - 100px);
+  height: calc(100% - 100px);
+  border: 1px solid #ccc;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#calc .item .item_one .item_two .item_three {
+  width: calc(100% - 100px);
+  height: calc(100% - 100px);
+  border: 1px solid #ccc;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* input {
+  /* outline: none; */
+/* outline: 5px solid var(--primary-color); */
+
+#paragraph {
+}
+#paragraph h1 {
+  text-transform: lowercase;
+  /* letter-spacing: 2px;
+  word-spacing: 10px; */
+  color: blue;
+  font-size: 40px;
+  font-weight: 400;
+  /* width: 200px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; */
+  position: relative;
+  display: inline-block;
+  font-family: "Luckiest";
+}
+
+#paragraph h1::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100px;
+  height: 10px;
+  background-color: black;
+}
+
+/* #btn:active {
+  background-color: green;
+} */
+
+#table_row {
+}
+#table_row table {
+  width: 100%;
+  border: 1px solid black;
+}
+#table_row table {
+  border-collapse: collapse;
+  overflow-x: auto;
+}
+#table_row table tr,
+th,
+td {
+  border: 1px solid black;
+  padding: 12px;
+}
+/* #table_row table tr:last-child {
+  background-color: red;
+  color: white;
+} */
+
+/* #table_row table tr:nth-child(5n) {
+  background-color: red;
+  color: white;
+}
+#table_row table tr:nth-child(5n -1) {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+#table_row table tr:nth-child(5n-2) {
+  background-color: rgb(143, 197, 57);
+  color: white;
+}
+#table_row table tr:nth-child(5n-3) {
+  background-color: rgb(29, 80, 102);
+  color: white;
+}
+#table_row table tr:nth-child(5n-4) {
+  background-color: rgb(81, 34, 122);
+  color: white;
+} */
