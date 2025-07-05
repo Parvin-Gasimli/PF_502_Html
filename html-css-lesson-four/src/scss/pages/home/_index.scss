@@ -1,0 +1,88 @@
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$primary-bg: #f8f9fa;
+$primary_font: "Poppins", sans-serif;
+$dark_color: #000000;
+$white_color: #ffffff;
+$rounded-sm: 4px;
+$rounded-md: 8px;
+$rounded-xl: 12px;
+
+%flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+%btn_text_Sm {
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: $rounded-md;
+  padding: 8px 16px;
+  font-size: 14px;
+  width: 100%;
+}
+
+%text_Sm {
+  font-weight: 500;
+  line-height: 1.5;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+}
+
+@mixin flexible(
+  $direction: null,
+  $items: null,
+  $justify: null,
+  $gap: null,
+  $wrap: null
+) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $items;
+  justify-content: $justify;
+  gap: $gap;
+  flex-wrap: $wrap;
+}
+#hero {
+  font-family: $primary_font;
+  .card_items {
+    border: 1px solid $dark_color;
+    padding: 20px;
+    border-radius: $rounded-xl;
+    h1 {
+      @extend %text_Sm;
+    }
+
+    h2 {
+      @extend h1;
+      color: $primary-color;
+    }
+    p {
+      @extend h2;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    .btn_groups {
+      margin-top: 20px;
+      @include flexible(row, center, center, 12px);
+      .first_btn {
+        background-color: $dark_color;
+        color: $white_color;
+        @include flexible(row, center, center, 12px);
+        @extend %btn_text_Sm;
+      }
+      .second_btn {
+        @extend .first_btn;
+        background-color: $primary-color;
+        color: $white_color;
+        border: 1px solid $primary_color;
+      }
+    }
+  }
+}
