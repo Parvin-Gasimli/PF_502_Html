@@ -1,0 +1,18 @@
+@use "../vendors/varaible" as v;
+@use "../vendors/mixin" as m;
+
+nav {
+  background-color: v.$white-color;
+  font-family: v.$font-monserrat;
+  padding: 12px 0;
+  .menu_items {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    li {
+      a {
+      }
+    }
+  }
+}

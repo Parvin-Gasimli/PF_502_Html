@@ -1,0 +1,32 @@
+header {
+  padding: 22px 0;
+  .logo {
+  }
+  .center_item {
+    @include flexible(row, start, center, nowrap, 12px);
+    li {
+      .search {
+        border: 1px solid #ddd;
+        padding: 6px 12px;
+        border-radius: $base_rounded;
+        input {
+          border: none;
+          outline: none;
+          padding: 5px;
+        }
+        button {
+          background-color: transparent;
+          border: none;
+        }
+      }
+    }
+  }
+  .navbar_icons {
+    @include flexible(row, center, start, nowrap, 12px);
+    li {
+      i {
+        font-size: 22px;
+      }
+    }
+  }
+}

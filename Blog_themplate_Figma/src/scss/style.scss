@@ -1,0 +1,10 @@
+@forward "./base/reset";
+@forward "./vendors/varaible";
+@forward "./vendors/mixin";
+@forward "./vendors/extends";
+@forward "./components/link";
+@forward "./layout/navbar";
+@forward "./pages/home/hero";
+@forward "./components/card";
+@forward "./components/heading";
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");

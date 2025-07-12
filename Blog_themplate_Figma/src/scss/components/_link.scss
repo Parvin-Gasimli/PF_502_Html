@@ -1,0 +1,13 @@
+@use "../vendors/varaible" as v;
+@use "../vendors/mixin" as m;
+.link {
+  a {
+    text-decoration: none;
+    @include m.LinkTextWithStyle(
+      "link",
+      map-get(v.$text_sizes, base),
+      normal,
+      150%
+    );
+  }
+}

@@ -1,0 +1,145 @@
+@use "../vendors/varaible" as v;
+$baseBtnVariantsColors: (
+  primary: #007bff,
+  secondary: #6c757d,
+  success: #28a745,
+  danger: #dc3545,
+  warning: #ffc107,
+  info: #17a2b8,
+  light: #f8f9fa,
+  dark: #343a40,
+);
+
+$blog_size: (
+  h1: 32px,
+  h2: 2.5rem,
+  h3: 1.75rem,
+  h4: 24px,
+  h5: 1.25rem,
+  h6: 0.6rem,
+  sm: 18px,
+  xs: 16px,
+);
+
+@mixin paddingWithIf($padding_left, $padding_top) {
+  @if ($padding_left==$padding_xl) {
+    background-color: black;
+    padding: $padding_xl;
+  } @else {
+    background-color: yellow;
+    padding: $padding_lg;
+  }
+}
+
+@mixin ButtonsWithVariants($color) {
+  @if ($color==primary) {
+    background-color: map-get($baseBtnVariantsColors, primary);
+    border: 1px solid map-get($baseBtnVariantsColors, primary);
+    border-radius: 4px;
+    padding: $padding_lg;
+  } @else if($color==secondary) {
+    background-color: map-get($baseBtnVariantsColors, secondary);
+    border: 1px solid map-get($baseBtnVariantsColors, secondary);
+    border-radius: 4px;
+    padding: $padding_lg;
+  } @else if($color==success) {
+    background-color: map-get($baseBtnVariantsColors, success);
+    border: 1px solid map-get($baseBtnVariantsColors, success);
+    border-radius: 4px;
+    padding: $padding_lg;
+  } @else if($color==danger) {
+    background-color: map-get($baseBtnVariantsColors, danger);
+    border: 1px solid map-get($baseBtnVariantsColors, danger);
+    border-radius: 4px;
+    padding: $padding_lg;
+  } @else if($color==warning) {
+    background-color: map-get($baseBtnVariantsColors, warning);
+    border: 1px solid map-get($baseBtnVariantsColors, warning);
+    border-radius: 4px;
+    padding: $padding_lg;
+  } @else if($color==info) {
+    background-color: map-get($baseBtnVariantsColors, info);
+    border: 1px solid map-get($baseBtnVariantsColors, info);
+    border-radius: 4px;
+    padding: $padding_lg;
+  } @else if($color==light) {
+    background-color: map-get($baseBtnVariantsColors, light);
+    border: 1px solid map-get($baseBtnVariantsColors, light);
+    border-radius: 4px;
+    padding: $padding_lg;
+  } @else if($color==dark) {
+    background-color: map-get($baseBtnVariantsColors, dark);
+    border: 1px solid map-get($baseBtnVariantsColors, dark);
+    border-radius: 4px;
+    padding: $padding_lg;
+  } @else {
+    background-color: transparent;
+    border: none;
+  }
+}
+
+@mixin HeadingSizesWithMixin($type) {
+  @if ($type== "h1") {
+    font-size: map-get($blog_size, h1);
+    font-style: normal;
+    font-weight: 700;
+    font-family: v.$font-monserrat;
+    line-height: 40px;
+    @media (max-width: 768px) {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  } @else if($type== "h2") {
+    font-size: map-get($blog_size, h2);
+    font-style: normal;
+    font-family: v.$font-monserrat;
+  } @else if($type== "h3") {
+    font-size: map-get($blog_size, h3);
+    font-style: normal;
+    font-family: v.$font-monserrat;
+  } @else if($type== "h4") {
+    font-size: map-get($blog_size, h4);
+    font-style: normal;
+    font-family: v.$font-monserrat;
+    @media (max-width: 768px) {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  } @else if($type== "h5") {
+    font-size: map-get($blog_size, h5);
+    font-style: normal;
+    font-family: v.$font-monserrat;
+  } @else if($type== "h6") {
+    font-size: map-get($blog_size, h6);
+    font-style: normal;
+    font-family: v.$font-monserrat;
+  } @else if($type== "text") {
+    font-family: v.$default_font_family;
+    font-size: map-get($blog_size, sm);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+  } @else {
+    font-size: map-get($blog_size, xs);
+    font-style: normal;
+    font-family: v.$font-monserrat;
+  }
+}
+
+@mixin LinkTextWithStyle($type, $size, $weight, $l_height) {
+  @if ($type==link) {
+    color: v.$text_base_color;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $l_height;
+  }
+}
+
+@mixin Flexible($justify, $align, $gap: 0, $wrap, $direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+  flex-wrap: $wrap;
+}

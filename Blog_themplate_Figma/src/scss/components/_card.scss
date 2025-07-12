@@ -1,0 +1,101 @@
+@use "../vendors/mixin" as m;
+@use "../vendors/extends" as *;
+.base_card {
+  &__img {
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 12px;
+    @media (max-width: 900px) {
+      height: 400px;
+    }
+    @media (max-width: 768px) {
+      height: 300px;
+    }
+
+    img {
+      @extend %coverImg;
+    }
+  }
+  h2 {
+    @include m.HeadingSizesWithMixin("h4");
+    line-height: 150%;
+    font-weight: 700;
+    margin-top: 6px;
+  }
+  .card_footer {
+    .card_user {
+      margin: 10px 0;
+      @include m.Flexible(space-between, center, 0px, nowrap, row);
+      margin: 10px 0;
+      .card_user_info {
+        @include m.Flexible(center, center, 12px, nowrap, row);
+        .card_user_icon {
+          width: 40px;
+          height: 40px;
+          overflow: hidden;
+          border-radius: 100%;
+          img {
+            @extend %coverImg;
+          }
+        }
+        span {
+          @include m.HeadingSizesWithMixin("text");
+        }
+      }
+      .time {
+        @include m.HeadingSizesWithMixin("");
+        color: #9a9a9a;
+        font-weight: 400;
+      }
+    }
+  }
+}
+.column_card {
+  @include m.Flexible(space-between, center, 12px, nowrap, row);
+  @media (max-width: 768px) {
+    // flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  &__img {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+  &__right {
+    @include m.Flexible(space-between, center, 0px, nowrap, column);
+    .card_user {
+      margin: 10px 0;
+      width: 100%;
+      @include m.Flexible(space-between, center, 0px, nowrap, row);
+      .card_user_info {
+        @include m.Flexible(center, center, 12px, nowrap, row);
+        .card_user_icon {
+          width: 40px;
+          height: 40px;
+          overflow: hidden;
+          border-radius: 100%;
+          img {
+            @extend %coverImg;
+          }
+        }
+        span {
+          @include m.HeadingSizesWithMixin("text");
+        }
+      }
+      .time {
+        @include m.HeadingSizesWithMixin("");
+        color: #9a9a9a;
+        font-weight: 400;
+      }
+    }
+  }
+  h2 {
+    @include m.HeadingSizesWithMixin("h4");
+    line-height: 150%;
+    font-weight: 700;
+    margin-top: 6px;
+  }
+}

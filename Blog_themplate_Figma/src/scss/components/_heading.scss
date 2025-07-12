@@ -1,0 +1,8 @@
+@use "../vendors/mixin" as m;
+.heading_one {
+  @include m.HeadingSizesWithMixin("h1");
+}
+.paraqraph {
+  @include m.HeadingSizesWithMixin("text");
+  font-weight: 400;
+}
